@@ -18,6 +18,9 @@
 #
 #     Find the value of d < 1000 for which 1/d contains the longest recurring cycle in its decimal fraction part.
 
+from typing import Tuple
+
+
 # Idea:
 #     First consider the representation of a recurring fraction in decimal.
 #     Suppose we have a number cycle `c` repeating in the span of `w` digits after the decimal point.
@@ -46,7 +49,7 @@
 #     Here, we know S' is a recurring decimal number, and can be represented as a fraction.
 #     S is thus another fraction.
 
-def main(n):
+def main(n: int) -> Tuple[int, int]:
     """
     Returns the number `d` (< `n`) for which 1/d contains the
       longest recurring cycle in its decimal fraction part.
